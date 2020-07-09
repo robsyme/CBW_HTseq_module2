@@ -1,18 +1,18 @@
 ---
 layout: tutorial_page
-permalink: /htseq_2019_module2_lab
+permalink: /htseq_2020_module2_lab
 title: HTseq Module 2 Lab
 header1: Workshop Pages for Students
-header2: Informatics for High-throughput Sequencing Data Analysis 2019 Module 2 Lab
+header2: Informatics for High-throughput Sequencing Data Analysis 2020 Module 2 Lab
 image: /site_images/CBW_High-throughput_icon.jpg
-home: https://bioinformaticsdotca.github.io/htseq_2019
-author: Sorana Morrissy, Florence Cavalli and Heather Gibling
-modified: June 2, 2019
+home: https://bioinformaticsdotca.github.io/htseq_2020
+author: Sorana Morrissy, Florence Cavalli, Heather Gibling, and Rob Syme
+modified: July 8, 2020
 ---
 
 # HTseq Module 2 - IGV lab
 
-This lab was created by Sorana Morrissy, then modified by Florence Cavalli and Heather Gibling
+This lab was created by Sorana Morrissy, then modified by Florence Cavalli, Heather Gibling, and Rob Syme.
 
 
 ## Introduction
@@ -35,15 +35,15 @@ Things to know before you start:
 * There are a few thought-provoking **Questions** or **Notes** pertaining to sections of the lab. These are **optional**, and may take more time, but are meant to help you better understand the visualizations you are seeing.
 
 
-### Requirements 
+### Requirements
 
-* [Integrative Genomics Viewer](http://www.broadinstitute.org/igv) 
+* [Integrative Genomics Viewer](http://software.broadinstitute.org/software/igv/)
 * Ability to run Java
 
 
 ### Compatibility
 
-This tutorial was intended for **IGV v2.3 or higher**, which is available on the [Download](http://www.broadinstitute.org/software/igv/download) page. It is *strongly* recommended that you use one of these versions, as older versions may not be compatible. If you have installed a former version, please uninstall it and install the latest version.
+This tutorial was intended for **IGV v2.3 or higher**, which is available on the [Download](http://software.broadinstitute.org/software/igv/download) page. It is *strongly* recommended that you use one of these versions, as older versions may not be compatible. If you have installed a former version, please uninstall it and install the latest version.
 
 
 ### Data Set for IGV
@@ -61,13 +61,13 @@ We will be visualizing read alignments using the
 First, lets familiarize ourselves with it.
 
 
-## The IGV Interface 
+## The IGV Interface
 
 <img src="https://github.com/bioinformaticsdotca/BiCG_2019/raw/master/Module3/images/IGV-layout.png" width="500"/>
 
 ### Load a Genome and Data Tracks
 
-By default, IGV loads Human hg19 as the reference genome. If you work with another version of the human genome, or another organism altogether, you can change the genome by clicking the drop down menu in the upper-left. For this lab, we'll be using Human hg19.  
+By default, IGV loads Human hg19 as the reference genome. If you work with another version of the human genome, or another organism altogether, you can change the genome by clicking the drop down menu in the upper-left. For this lab, we'll be using Human hg19.
 
 We will also load additional tracks from **Server** *(File -> Load from Server)*:
 
@@ -95,7 +95,7 @@ Navigate to **chr1:10,000-11,000** by entering this into the location field (in 
 
 IGV displays the sequence of letters in a genome as a sequence of colours (e.g. A = green). This makes repetitive sequences, like the ones found at the start of this region, easy to identify.
 
-You can navigate to a gene of interest by typing it in the same box the genomic coordinates are in and pressing Enter/Return. Try it for your favourite gene, or BRCA1 if you can't decide. 
+You can navigate to a gene of interest by typing it in the same box the genomic coordinates are in and pressing Enter/Return. Try it for your favourite gene, or BRCA1 if you can't decide.
 
 ![Gene model.](https://bioinformatics-ca.github.io/images/Igv-genes.png)
 
@@ -115,7 +115,7 @@ Sometimes it's really useful to save where you are, or to load regions of intere
 
 We will visualize alignments from the breast cancer cell line HCC1143. For speed, only a small portion of chr21 will be loaded (19M:20M).
 
-*HCC1143 Alignments to hg19:* 
+*HCC1143 Alignments to hg19:*
 
 * [HCC1143.normal.21.19M-20M.bam](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/data_sets/HCC1143.normal.21.19M-20M.bam)
 * [HCC1143.normal.21.19M-20M.bam.bai](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/data_sets/HCC1143.normal.21.19M-20M.bam.bai)
@@ -129,7 +129,7 @@ Copy the files to your local drive, and in IGV choose *File > Load from File*, s
 
 ## Visualizing Read Alignments
 
-Navigate to a narrow window on chromosome 21: "chr21:19,480,041-19,480,386". 
+Navigate to a narrow window on chromosome 21: "chr21:19,480,041-19,480,386".
 
 IGV lets you group, sort, and color alignments to better visualize the data. To start our exploration, right click on the track name, and select the following options:
 * Sort alignments by “start location”
@@ -151,22 +151,22 @@ Once you select a read, a pop-up window shows quality metrics and other informat
 
 ![Read information.](https://bioinformatics-ca.github.io/images/Igv_click_read.png)
 
-# Visualization Part 2: Inspecting SNPs, SNVs, and SVs 
+# Visualization Part 2: Inspecting SNPs, SNVs, and SVs
 
 In this section we will be looking in detail at 8 positions in the genome, and determining whether they represent real events or artifacts.
 
 
-## Neighbouring Somatic SNV and Germline SNP 
+## Neighbouring Somatic SNV and Germline SNP
 
 Navigate to position "chr21:19,479,237-19,479,814"
   * Center on the SNV indicated by the red and blue coloring in the coverage track. You can center by clicking on the alignments and dragging them left or right until the SNV lines up with the black center line. (If the center line isn't visible, turn it on by going to *View -> Preferences -> Alignments -> Show center line*). You can also type "chr21:19,478,749-19,479,891" into the navigation bar to center on the SNV.
   * Sort alignments by “base”
   * Color alignments by “read strand”. **Red** reads are in the **forward** orientation, and **blue** reads are in the **reverse orientation**.
- 
+
 ![Example1. Good quality SNVs/SNPs](https://bioinformatics-ca.github.io/images/Igv_example1_color.png)
 
  **Notes:**
- * High base qualities in all reads except one (where the alt allele is the last base of the read) 
+ * High base qualities in all reads except one (where the alt allele is the last base of the read)
  * Good mapping quality of reads, no strand bias, allele frequency consistent with heterozygous mutation
 
  **Questions:**
@@ -174,7 +174,7 @@ Navigate to position "chr21:19,479,237-19,479,814"
  * How does "Color by read strand" help?
 
 
-## Homopolymer Repeat with Indel 
+## Homopolymer Repeat with Indel
 
 Navigate to position "chr21:19,518,412-19,518,497"
  * Group alignments by "read strand"
@@ -188,7 +188,7 @@ Navigate to position "chr21:19,518,412-19,518,497"
 
  * Now center on the one base deletion indicated by broken reads with black lines. You may have to scroll down to find these reads.
  * Sort alignments by “base”
- 
+
 ![Example2](https://bioinformatics-ca.github.io/images/Igv_example2b.png)
 
  **Notes:**
@@ -198,9 +198,9 @@ Navigate to position "chr21:19,518,412-19,518,497"
  * (Using an older version of dbSNP (1.3.1) the entry at this location (rs74604068) is an A->T, and in all likelihood an artifact i.e. the common variants included some cases that are actually common misalignments caused by repeats. This is getting better; this entry is not present anymore in dbSNP 1.4.7!)
 
 
-## Coverage by GC 
+## Coverage by GC
 
-Navigate to position "chr21:19,611,925-19,631,555"  
+Navigate to position "chr21:19,611,925-19,631,555"
 Note that the range contains areas where coverage drops to zero in a few places.
  * Use Collapsed view
  * Color alignments by "insert size"
@@ -212,7 +212,7 @@ Note that the range contains areas where coverage drops to zero in a few places.
  * Does the coverage correspond to the GC content?
 
 
-## Heterozygous SNPs on Different Alleles 
+## Heterozygous SNPs on Different Alleles
 
 Navigate to region "chr21:19,666,833-19,667,007"
   * Center on the first SNV (green)
@@ -225,7 +225,7 @@ Navigate to region "chr21:19,666,833-19,667,007"
  * Both SNV positions are spanned by single reads, but reads only have either one or the other, indicating that they are on different haplotypes
 
 
-## Low Mapping Quality 
+## Low Mapping Quality
 
 Navigate to region "chr21:19,800,320-19,818,162"
 * Use Collapsed view
@@ -243,14 +243,14 @@ Navigate to region "chr21:19,800,320-19,818,162"
  * Why do LINE elements affect mapping quality?
 
 
-## Homozygous Deletion 
+## Homozygous Deletion
 
 Navigate to region "chr21:19,324,469-19,331,468"
  * Sort reads by insert size
     * Some read pairs are colored red and blue. This is different from "Color by read strand". **Red** read pairs correspond to insert sizes that are **larger** than expected, and **blue** read pairs correspond to insert sizes that are **smaller** than expected.
     * **Larger (red) insert sizes** can be indicative of a **deletion**
     * **Smaller (blue) insert sizes** can be indicative of an **insertion**
-    * This is well explained [here](https://software.broadinstitute.org/software/igv/interpreting_insert_size) 
+    * This is well explained [here](https://software.broadinstitute.org/software/igv/interpreting_insert_size)
  * Turn on "View as Pairs" and "Expanded" view
  * Click on a red read pair to pull up information on alignments
 
@@ -265,7 +265,7 @@ Navigate to region "chr21:19,324,469-19,331,468"
  * What other track provides evidence of a deletion at this location?
 
 
-## Mis-Alignment 
+## Mis-Alignment
 
 Navigate to region "chr21:19,102,154-19,103,108"
 * Turn on "View as Pairs" and "Expanded" view
@@ -276,12 +276,12 @@ Navigate to region "chr21:19,102,154-19,103,108"
 ![Example7](https://bioinformatics-ca.github.io/images/Igv_example7.png)
 
  **Notes:**
- * This is a position where an AluY element causes mis-alignment.  
- * Misaligned reads have several mismatches to the reference and 
+ * This is a position where an AluY element causes mis-alignment.
+ * Misaligned reads have several mismatches to the reference and
  * Well-aligned reads have partners on other chromosomes where additional AluY elements are encoded. You may need to scroll down to see this reads.
 
 
-## Translocation 
+## Translocation
 
 Navigate to region "chr21:19,089,694-19,095,362"
  * Expanded view
@@ -326,7 +326,7 @@ The IGV screenshots are in the screenshots output directory you set. Have a look
 
 # Visualization Part 4: Visualizing Long Reads
 
-Long reads aligned to a reference genome can be visualized like short reads, but true variants might be hard to find among the noise from increased sequencing error rates in long-read sequencing technologies. We will view some reads obtained from Oxford Nanopore sequencing provided by [Miten Jain](https://github.com/mitenjain/NA12878/blob/master/nanopore-human-genome/rel_3_4.md) from the recent publication [Nanopore sequencing and assembly of a human genome with ultra-long reads](https://www.nature.com/articles/nbt.4060). 
+Long reads aligned to a reference genome can be visualized like short reads, but true variants might be hard to find among the noise from increased sequencing error rates in long-read sequencing technologies. We will view some reads obtained from Oxford Nanopore sequencing provided by [Miten Jain](https://github.com/mitenjain/NA12878/blob/master/nanopore-human-genome/rel_3_4.md) from the recent publication [Nanopore sequencing and assembly of a human genome with ultra-long reads](https://www.nature.com/articles/nbt.4060).
 
 Before getting started, **remove the tracks for HCC1143.normal.21.19M-20M.bam (both the alignment track and the coverage track)**. We will be using a different reference genome, so these reads will no longer be properly aligned. Change the reference genome in the top left corner to **Human (hg38)**. If this option isn't available you will need to download it. Selct *More*, then scroll down and select *Human hg38*.
 
@@ -366,14 +366,14 @@ Generate a consensus sequence to hide substitution errors:
 
 ## Viewing Variants
 
-Scroll around and see if you can find a plausible SNV. 
+Scroll around and see if you can find a plausible SNV.
 * What information are you using as evidence for this SNV?
 
 Now navigate to position "chr21:19,790,758-19,790,965"
 
 <img src="https://github.com/bioinformaticsdotca/CSHL_2019/raw/master/images/IGV-nanopore-homopolymer-deletion.png" width="1000"/>
 
-**Notes:** 
+**Notes:**
 * The reads here all have a deletion indicated by thin black bars splitting up parts of the reads. It would seem as though this is evidence for a deletion in this sample at this position
 * However, look at the reference sequence at the deletion--it is all red, indicating "T"s! You can zoom in to confirm.
 * Nanopore sequencing is prone to deletions at homopolymer repeats, or stretches of a single base, as seen here. Therefore this is likely a sequencing artifact and not a true deletion.

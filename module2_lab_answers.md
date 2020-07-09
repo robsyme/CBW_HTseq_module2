@@ -1,13 +1,13 @@
 ---
 layout: tutorial_page
-permalink: /htseq_2019_module2_lab_answers
+permalink: /htseq_2020_module2_lab_answers
 title: HTseq Module 2 Lab Answers
 header1: Workshop Pages for Students
-header2: Informatics for High-throughput Sequencing Data Analysis 2019 Module 2 Lab Answers
+header2: Informatics for High-throughput Sequencing Data Analysis 2020 Module 2 Lab Answers
 image: /site_images/CBW_High-throughput_icon.jpg
-home: https://bioinformaticsdotca.github.io/htseq_2019
-author: Heather Gibling
-modified: June 2, 2019
+home: https://bioinformaticsdotca.github.io/htseq_2020
+author: Heather Gibling, Rob Syme
+modified: July 8, 2020
 ---
 
 # Module 2 - IGV Lab Answers
@@ -20,7 +20,7 @@ Below are suggested answers to the questions from lab 3. You might have thought 
 
 # Visualization Part 2: Inspecting SNPs, SNVs, and SVs
 
-## Neighbouring Somatic SNV and Germline SNP 
+## Neighbouring Somatic SNV and Germline SNP
 
 **Questions:**
 * What does "Shade base by quality" do? How might this be helpful?
@@ -28,28 +28,28 @@ Below are suggested answers to the questions from lab 3. You might have thought 
 * How does "Color by read strand" help?
     * Lets us see that the T alternate allele is present on both forward and reverse sequencing reads. If it was present on only forward reads or only reverse reads, that could indicate a sequencing artifact as opposed to a probable SNV.
 
-## Homopolymer Repeat with Indel 
+## Homopolymer Repeat with Indel
 
 **Question:**
 * Is the "T" likely a valid SNV? What evidence suggests it is or isn't?
     * Probably not. 6/36 reads show a T at this positition (numbers obtained by clicking/hovering on the coverage track block at this position), and 4 of those 6 are light colored (low quality). Additionally, only forward (red) reads have the T alternate allele, indicating a strand bias sequencing error.
 
-## Coverage by GC 
+## Coverage by GC
 
 **Question:**
 * Does the coverage correspond to the GC content?
     * Yes! Read coverage is low where GC content of the reference genome is very low (and also very high, but in these data the low coverage effect is easier to see). Seqeuencing technologies are not perfect and have biases, meaning not all regions of the genome are covered equally. You can read more about the effect of GC content on short-read sequencing coverage [here](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2013-14-5-r51).
 
-## Low Mapping Quality 
+## Low Mapping Quality
 
 **Question:**
 * Why do LINE elements affect mapping quality?
     * LINEs (long interspersed nuclear elements) are retrotransposons found throughout the genome. Because these sequences are repeated in many different locations, when a read aligns to part of this sequence, it can often map equally well to multiple locations in the genome. This is not helpful, so aligners generally give low mapping quality scores reads that do not map uniquely to one location (i.e. 0; the reads will also be white instead of grey in IGV).
 
-## Homozygous Deletion 
+## Homozygous Deletion
 
 **Question:**
-* What other track provides evidence of a deletion at this location? 
+* What other track provides evidence of a deletion at this location?
     * The coverage track drops down to zero at the same location as the gap in sequencing reads.
 
 ---
