@@ -1,20 +1,20 @@
 ---
-layout: tutorial_page
-permalink: /htseq_2020_module2_lab_answers
+layout: aws_tutorial_page
+permalink: /HTG_2021/CBW_HTseq_module2/lab_answers
 title: HTseq Module 2 Lab Answers
 header1: Workshop Pages for Students
 header2: Informatics for High-throughput Sequencing Data Analysis 2020 Module 2 Lab Answers
 image: /site_images/CBW_High-throughput_icon.jpg
-home: https://bioinformaticsdotca.github.io/htseq_2020
+home: /HTG_2021.html
 author: Heather Gibling, Rob Syme
-modified: July 8, 2020
+modified: July 8, 2021
 ---
 
 # Module 2 - IGV Lab Answers
 
 ## Suggested Answers
 
-Below are suggested answers to the questions from lab 3. You might have thought of additional reasons and answers!
+Below are suggested answers to the questions from lab 2. You might have thought of additional reasons and answers!
 
 ---
 
