@@ -1,13 +1,13 @@
 ---
 layout: tutorial_page
-permalink: /htseq_2020_module2_lab
+permalink: /HTG_2021/module2_lab
 title: HTseq Module 2 Lab
 header1: Workshop Pages for Students
-header2: Informatics for High-throughput Sequencing Data Analysis 2020 Module 2 Lab
+header2: Informatics for High-throughput Sequencing Data Analysis 2021 Module 2 Lab
 image: /site_images/CBW_High-throughput_icon.jpg
-home: https://bioinformaticsdotca.github.io/htseq_2020
+home: https://bioinformaticsdotca.github.io/HTG_2021
 author: Sorana Morrissy, Florence Cavalli, Heather Gibling, and Rob Syme
-modified: July 8, 2020
+modified: Sept 26, 2021
 ---
 
 # HTseq Module 2 - IGV lab
@@ -48,9 +48,9 @@ This tutorial was intended for **IGV v2.3 or higher**, which is available on the
 
 ### Data Set for IGV
 
-* Chromosome 21: 19,000,000-20,000,000
-* [HCC1143.normal.21.19M-20M.bam](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/data_sets/HCC1143.normal.21.19M-20M.bam)
-* [HCC1143.normal.21.19M-20M.bam.bai](https://github.com/bioinformatics-ca/bioinformatics-ca.github.io/raw/master/data_sets/HCC1143.normal.21.19M-20M.bam.bai)
+* Chromosome 21:19,000,000-20,000,000
+* BAM: [HCC1143.normal.21.19M-20M.bam](http://htg.oicrcbw.ca/Module2/HCC1143.normal.21.19M-20M.bam)
+* BAM Index: [HCC1143.normal.21.19M-20M.bam.bai](http://htg.oicrcbw.ca/Module2/HCC1143.normal.21.19M-20M.bam.bai)
 
 
 # Visualization Part 1: Getting familiar with IGV
@@ -91,13 +91,13 @@ You should see listing of chromosomes in this reference genome. Click on **1**, 
 
 Navigate to **chr1:10,000-11,000** by entering this into the location field (in the top-left corner of the interface) and clicking **Go** or pressing Enter/Return on your keyboard. This shows a window of chromosome 1 that is 1,000 base pairs wide and beginning at position 10,000.
 
-![Navigation using Location text field. Sequence track displayed as sequence of colours.](https://bioinformatics-ca.github.io/images/Igv-1.png)
+![Navigation using Location text field. Sequence track displayed as sequence of colours.](images/Navigation-chr1.png)
 
 IGV displays the sequence of letters in a genome as a sequence of colours (e.g. A = green). This makes repetitive sequences, like the ones found at the start of this region, easy to identify.
 
 You can navigate to a gene of interest by typing it in the same box the genomic coordinates are in and pressing Enter/Return. Try it for your favourite gene, or BRCA1 if you can't decide.
 
-![Gene model.](https://bioinformatics-ca.github.io/images/Igv-genes.png)
+![Gene model.](images/Navigation-BRCA1.png)
 
 Genes are represented as lines and boxes. Lines represent intronic regions, and boxes represent exonic regions. The arrows indicate the strand on which the gene lies.
 
@@ -108,7 +108,7 @@ When loaded, tracks are stacked on top of each other. You can identify which tra
 
 Sometimes it's really useful to save where you are, or to load regions of interest. For this purpose, there is a **Region Navigator** in IGV. To access it, click *Regions > Region Navigator*. While you browse around the genome, you can save some bookmarks by pressing the **Add** button at any time.
 
-![Bookmarks in IGV.](https://bioinformatics-ca.github.io/images/Igv-bookmarks.png)
+![Bookmarks in IGV.](images/Regions-BRCA1.png)
 
 
 ## Loading Read Alignments
@@ -310,8 +310,8 @@ Batch scripts are described on the IGV website:
 We also need to provide a sample attribute file as described [here](http://software.broadinstitute.org/software/igv/?q=SampleInformation).
 
 Download the batch script and the attribute file for our dataset:
-* Batch script: [Run_batch_IGV_snapshots_example.txt](https://raw.githubusercontent.com/bioinformaticsdotca/HT-Biology_2017/master/HtSeq/Run_batch_IGV_snapshots_example.txt)
-* Attribute file: [igv_HCC1143_attributes.txt](https://raw.githubusercontent.com/bioinformaticsdotca/HT-Biology_2017/master/HtSeq/Igv_HCC1143_attributes.txt)
+* Batch script: [Run_batch_IGV_snapshots_example.txt](./Run_batch_IGV_snapshots_example.txt)
+* Attribute file: [igv_HCC1143_attributes.txt](./Igv_HCC1143_attributes.txt)
 
 After downloading those two files, open *Run_batch_IGV_snapshots_example.txt* in a text editor and  **update the paths for the bam file and the output directory** (indicated as \*\*\*\* in the file) to your directories. The batch script will not run if these paths are not updated because these default directories do not exist on your computer.
 
@@ -388,5 +388,5 @@ Now navigate to position "chr21:19,790,758-19,790,965"
 
 ## Resources
 
-* [Suggested answers to the questions from this lab](https://bioinformaticsdotca.github.io/htseq_2019_module2_lab_answers)
+* [Suggested answers to the questions from this lab](./module2_lab_answers)
 * [IGV user manual](http://software.broadinstitute.org/software/igv/UserGuide)
