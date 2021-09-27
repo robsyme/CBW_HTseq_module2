@@ -1,11 +1,11 @@
 ---
-layout: tutorial_page
-permalink: /HTG_2021/module2_lab_answers
+layout: aws_tutorial_page
+permalink: /HTG_2021/CBW_HTseq_module2/lab_answers
 title: HTseq Module 2 Lab Answers
 header1: Workshop Pages for Students
 header2: Informatics for High-throughput Sequencing Data Analysis 2020 Module 2 Lab Answers
 image: /site_images/CBW_High-throughput_icon.jpg
-home: https://bioinformaticsdotca.github.io/HTG_2021
+home: /HTG_2021.html
 author: Heather Gibling, Rob Syme
 modified: July 8, 2021
 ---
